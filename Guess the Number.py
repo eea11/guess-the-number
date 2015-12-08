@@ -7,7 +7,7 @@ def clear():
 
     The number is somewhere between 1 and 100.
 
-    You may end the program by entering the number 0.
+    You may end the program by entering CTRL + C or COMMAND + C.
 
     Good Luck! :)
     """
@@ -29,8 +29,8 @@ def clear():
             # The time.sleep(5) will  the loop = 0 for 5 seconds
             os.system('cls')
             # The "os.system('cls') stand for the terminal command "clear" that clears the screen.
-            guess_again()
-            # Once again, guess again will bring me back to the former guess_again.
+            clear()
+            # Once again, clear will bring me back to the former "def clear()" at the beginning..
         elif user < rightnum:
             print "That number you have selected is too low try again"
             # This is the message that will display if your number the user inputted is to less than 38.
