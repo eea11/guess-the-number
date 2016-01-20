@@ -7,7 +7,11 @@ def clear():
 
     The number is somewhere between 1 and 100.
 
-    You may end the program by entering CTRL + C or COMMAND + C.
+    Do not type any letters or the program will fail.
+
+    You may end the program by entering CTRL + C or COMMAND + C
+
+    If you choose to exit the program will give an error but it is not a problem
 
     Good Luck! :)
     """
@@ -21,15 +25,16 @@ def clear():
         # The def will make so that whenever I put guess_again it will loop it back to here.
     def guess_again():
         # The number will be inputed by the user
-        user = float(raw_input("Choose a number "))
+        print  "Choose a number "
+        user = (input("> "))
         if user ==  rightnum:
             print "Congratulations you have selected the correct number!"
             # This will come up if you guess the random number correctly.
             time.sleep(5)
-            # The time.sleep(5) will  the loop = 0 for 5 seconds
+            # The time.sleep(2) will  the loop = 0 for 2 seconds
             os.system('cls')
             # The "os.system('cls') stand for the terminal command "clear" that clears the screen.
-            clear()
+	    clear()
             # Once again, clear will bring me back to the former "def clear()" at the beginning..
         elif user < rightnum:
             print "That number you have selected is too low try again"
@@ -39,13 +44,15 @@ def clear():
         elif user > rightnum:
             print "The number you have selected is too high try again"
             # This is the message that will display if your chosen number is higher than 38.
-            # Once again, this will send you back to the line under def guess_again choose a new number.
             guess_again()
+	    # Once again, this will send you back to the line under def guess_again choose a new number.
         else:
             # This is what would happen if you wrote something that isn't a number.
             "That is not a number please try again."
             guess_again
     # The guess_again will return me to the line under def guess_again.s
 
+
     guess_again()
+
 clear()
